@@ -1,0 +1,19 @@
+unit Boleto.Interfaces;
+
+interface
+
+type
+  ITitulo<T> = interface
+
+  function &End: T;
+  end;
+
+
+  IBoelto = Interface
+    function LerConfiguracao(value: string): IBoelto;
+    function Titulo: ITitulo<IBoelto>;
+    procedure GerarPDF;
+  end;
+implementation
+
+end.
