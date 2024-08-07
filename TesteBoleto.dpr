@@ -2,9 +2,10 @@ program TesteBoleto;
 
 uses
   Vcl.Forms,
-  TesteProjetoBoleto in '..\TesteProjetoBoleto.pas' {frmPrincipal},
+  ProjetoBoleto in '..\ProjetoBoleto.pas' {frmPrincipal},
   Boleto.Interfaces in 'Interface\Boleto.Interfaces.pas',
-  Boleto.Classes in 'classe\Boleto.Classes.pas';
+  Boleto.Classes in 'classe\Boleto.Classes.pas',
+  Boleto.Implement in 'Implement\Boleto.Implement.pas';
 
 {$R *.res}
 

@@ -98,12 +98,12 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\TesteProjetoBoleto.pas">
+        <DCCReference Include="..\ProjetoBoleto.pas">
             <Form>frmPrincipal</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Interface\Boleto.Interfaces.pas"/>
         <DCCReference Include="classe\Boleto.Classes.pas"/>
+        <DCCReference Include="Implement\Boleto.Implement.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

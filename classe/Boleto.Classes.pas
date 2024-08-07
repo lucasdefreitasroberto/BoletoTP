@@ -158,7 +158,7 @@ end;
 
 function TTitulo<T>.&End: T;
 begin
-
+  Result := FParent;
 end;
 
 class function TTitulo<T>.New(Parent: T): ITitulo<T>;
@@ -344,242 +344,266 @@ end;
 
 function TTitulo<T>.NumeroDocumento(Value: string): ITitulo<T>;
 begin
-
+  Result := Self;
+  FNumeroDocumento := Value;
 end;
 
 function TTitulo<T>.NumeroDocumento: string;
 begin
-
+  Result := FNumeroDocumento;
 end;
 
 function TTitulo<T>.OcorrenciaOriginal(Value: Integer): ITitulo<T>;
 begin
-
+  Result := Self;
+  FOcorrenciaOriginal := Value;
 end;
 
 function TTitulo<T>.OcorrenciaOriginal: Integer;
 begin
-
+  Result := FOcorrenciaOriginal;
 end;
 
 function TTitulo<T>.PercentualMaxPagamento(Value: Currency): ITitulo<T>;
 begin
-
+  Result := Self;
+  FPercentualMaxPagamento := Value;
 end;
 
 function TTitulo<T>.PercentualMaxPagamento: Currency;
 begin
-
-end;
-
-function TTitulo<T>.PercentualMinPagamentoo: Currency;
-begin
-
+  Result :=   FPercentualMaxPagamento;
 end;
 
 function TTitulo<T>.PercentualMinPagamentoo(Value: Currency): ITitulo<T>;
 begin
-
+  Result := Self;
+  FPercentualMinPagamentoo := Value;
 end;
 
-function TTitulo<T>.PercentualMulta: Double;
+function TTitulo<T>.PercentualMinPagamentoo: Currency;
 begin
-
+  Result := FPercentualMinPagamentoo;
 end;
 
 function TTitulo<T>.PercentualMulta(Value: Double): ITitulo<T>;
 begin
-
+  Result := Self;
+  FPercentualMulta := Value;
 end;
 
-function TTitulo<T>.QtdePagamentoParcial: Integer;
+function TTitulo<T>.PercentualMulta: Double;
 begin
-
+  Result := FPercentualMulta;
 end;
 
 function TTitulo<T>.QtdePagamentoParcial(Value: Integer): ITitulo<T>;
 begin
+  Result := Self;
+  FQtdePagamentoParcial := Value;
+end;
 
+function TTitulo<T>.QtdePagamentoParcial: Integer;
+begin
+  Result := FQtdePagamentoParcial;
 end;
 
 function TTitulo<T>.SacadoBairro(Value: string): ITitulo<T>;
 begin
-
+  Result:= Self;
+  FSacadoBairro := Value;
 end;
 
 function TTitulo<T>.SacadoBairro: string;
 begin
-
-end;
-
-function TTitulo<T>.SacadoCEP: string;
-begin
-
+  Result := FSacadoBairro;
 end;
 
 function TTitulo<T>.SacadoCEP(Value: string): ITitulo<T>;
 begin
-
+  Result := Self;
+  FSacadoCEP := Value;
 end;
 
-function TTitulo<T>.SacadoCidade: string;
+function TTitulo<T>.SacadoCEP: string;
 begin
-
+  Result := FSacadoCEP;
 end;
 
 function TTitulo<T>.SacadoCidade(Value: string): ITitulo<T>;
 begin
+  Result := Self;
+  FSacadoCidade := Value;
+end;
 
+function TTitulo<T>.SacadoCidade: string;
+begin
+  Result := FSacadoCidade;
 end;
 
 function TTitulo<T>.SacadoCNPJCPF(Value: string): ITitulo<T>;
 begin
-
+  Result := Self;
+  FSacadoCNPJCPF := Value;
 end;
 
 function TTitulo<T>.SacadoCNPJCPF: string;
 begin
-
-end;
-
-function TTitulo<T>.SacadoLogradouro: string;
-begin
-
+  Result := FSacadoCNPJCPF;
 end;
 
 function TTitulo<T>.SacadoLogradouro(Value: string): ITitulo<T>;
 begin
-
+  Result := Self;
+  FSacadoLogradouro := Value;
 end;
 
-function TTitulo<T>.SacadoNomeSacado: string;
+function TTitulo<T>.SacadoLogradouro: string;
 begin
-
+  Result := FSacadoLogradouro;
 end;
 
 function TTitulo<T>.SacadoNomeSacado(Value: string): ITitulo<T>;
 begin
+  Result := Self;
+  FSacadoNomeSacado := Value;
+end;
 
+function TTitulo<T>.SacadoNomeSacado: string;
+begin
+  Result := FSacadoNomeSacado;
 end;
 
 function TTitulo<T>.SacadoNumero(Value: string): ITitulo<T>;
 begin
-
+  Result := Self;
+  FSacadoNumero := Value;
 end;
 
 function TTitulo<T>.SacadoNumero: string;
 begin
-
+  Result := FSacadoNumero;
 end;
 
 function TTitulo<T>.SacadoUF(Value: string): ITitulo<T>;
 begin
-
+  Result := Self;
+  FSacadoUF := Value;
 end;
 
 function TTitulo<T>.SacadoUF: string;
 begin
-
-end;
-
-function TTitulo<T>.TipoDesconto: Integer;
-begin
-
+  Result := FSacadoUF;
 end;
 
 function TTitulo<T>.TipoDesconto(Value: Integer): ITitulo<T>;
 begin
+  Result := Self;
+  FTipoDesconto := Value;
+end;
 
+function TTitulo<T>.TipoDesconto: Integer;
+begin
+  Result := FTipoDesconto;
 end;
 
 function TTitulo<T>.TipoPagamento(Value: Integer): ITitulo<T>;
 begin
-
+  Result := Self;
+  FTipoPagamento := Value;
 end;
 
 function TTitulo<T>.TipoPagamento: Integer;
 begin
-
+  Result := FTipoPagamento;
 end;
 
 function TTitulo<T>.ValorAbatimento(Value: Currency): ITitulo<T>;
 begin
-
+  Result := Self;
+  FValorAbatimento := Value;
 end;
 
 function TTitulo<T>.ValorAbatimento: Currency;
 begin
-
+  Result := FValorAbatimento;
 end;
 
 function TTitulo<T>.ValorDesconto(Value: Currency): ITitulo<T>;
 begin
-
+  Result := Self;
+  FValorDesconto := Value;
 end;
 
 function TTitulo<T>.ValorDesconto: Currency;
 begin
-
-end;
-
-function TTitulo<T>.ValorDocumento: Currency;
-begin
-
+  Result := FValorDesconto;
 end;
 
 function TTitulo<T>.ValorDocumento(Value: Currency): ITitulo<T>;
 begin
-
+  Result := Self;
+  FValorDocumento := Value;
 end;
 
-function TTitulo<T>.ValorMaxPagamento: Currency;
+function TTitulo<T>.ValorDocumento: Currency;
 begin
-
+  Result := FValorDocumento;
 end;
 
 function TTitulo<T>.ValorMaxPagamento(Value: Currency): ITitulo<T>;
 begin
+  Result := Self;
+  FValorMaxPagamento := Value;
+end;
 
+function TTitulo<T>.ValorMaxPagamento: Currency;
+begin
+  Result := FValorMaxPagamento;
 end;
 
 function TTitulo<T>.ValorMinPagamento(Value: Currency): ITitulo<T>;
 begin
-
+  Result := Self;
+  FValorMinPagamento := Value;
 end;
 
 function TTitulo<T>.ValorMinPagamento: Currency;
 begin
-
+  Result := FValorMinPagamento;
 end;
 
 function TTitulo<T>.ValorMoraJuros(Value: Currency): ITitulo<T>;
 begin
-
+  Result := Self;
+  FValorMoraJuros := Value;
 end;
 
 function TTitulo<T>.ValorMoraJuros: Currency;
 begin
-
-end;
-
-function TTitulo<T>.Vencimento: TDateTime;
-begin
-
+  Result := FValorMoraJuros;
 end;
 
 function TTitulo<T>.Vencimento(Value: TDateTime): ITitulo<T>;
 begin
-
+  Result := Self;
+  FVencimento := Value;
 end;
 
-function TTitulo<T>.Verso: Boolean;
+function TTitulo<T>.Vencimento: TDateTime;
 begin
-
+  Result := FVencimento;
 end;
 
 function TTitulo<T>.Verso(Value: Boolean): ITitulo<T>;
 begin
+  Result := Self;
+  FVerso := Value;
+end;
 
+function TTitulo<T>.Verso: Boolean;
+begin
+  Result := FVerso;
 end;
 
 end.

@@ -128,9 +128,9 @@ type
     function &End: T;
   end;
 
-  IBoelto = Interface
-    function LerConfiguracao(Value: string): IBoelto;
-    function Titulo: ITitulo<IBoelto>;
+  IBoleto = Interface
+    function LerConfiguracao(Value: string): IBoleto;
+    function Titulo: ITitulo<IBoleto>;
     procedure GerarPDF;
   end;
 
