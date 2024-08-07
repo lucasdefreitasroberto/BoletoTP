@@ -5,16 +5,21 @@ interface
 uses
   Boleto.Interfaces, ACBrBase, ACBrUtil, ACBrMail, ACBrUtil.FilesIO,
   ACBrBoletoConversao, ACBrBoletoRetorno, ACBrBoletoFPDF, ComCtrls,
-  ACBrBoletoFCFortesFr, ACBrBoletoFCFR, ACBrBoleto, Boleto.Classes;
+  ACBrBoletoFCFortesFr, ACBrBoletoFCFR, ACBrBoleto, Boleto.Classes,
+  System.IniFiles;
 
 type
   TBoleto = class(TInterfacedObject, IBoleto)
   private
     FACBrBoleto: TACBrBoleto;
     FACBrMail: TACBrMail;
-    FACBrBoletoFPDF: TACBrBoletoFPDF;
+    FACBrBoletoFPDF: TACBrBoletoFPDF;  //GERADOR_PDF
+    FACBrBoletoFCFR: TACBrBoletoFCFR; //GERADOR_FAST_REPORT
+    FACBrBoletoFCRL: TACBrBoletoFCFortes; //GERADOR_FORTES_REPORT
+    FArquivo : string;
     FTitulo: ITitulo<IBoleto>;
     procedure IncluirBoleto;
+    function GetINIValue(const FileName, Section, Key: string): string;
 
     constructor Create;
     destructor Destroy; override;
@@ -30,12 +35,33 @@ implementation
 
 { TBoleto }
 
+function TBoleto.GetINIValue(const FileName, Section, Key: string): string;
+var
+  IniFile: TIniFile;
+begin
+  IniFile := TIniFile.Create(FileName);
+  try
+    Result := IniFile.ReadString(Section, Key, '');
+  finally
+    IniFile.Free;
+  end;
+end;
+
 constructor TBoleto.Create;
 begin
   FACBrBoleto := TACBrBoleto.Create(nil);
   FACBrMail := TACBrMail.Create(FACBrBoleto);
-  FACBrBoletoFPDF := TACBrBoletoFPDF.Create(FACBrBoleto);
-  FACBrBoleto.ACBrBoletoFC := TACBrBoletoFCClass(FACBrBoletoFPDF);
+  {GERADOR_PDF}
+  //FACBrBoletoFPDF := TACBrBoletoFPDF.Create(FACBrBoleto);
+  //FACBrBoleto.ACBrBoletoFC := TACBrBoletoFCClass(FACBrBoletoFPDF);
+
+  {GERADOR_FAST_REPORT}
+  FACBrBoletoFCFR   := TACBrBoletoFCFR.Create(FACBrBoleto);
+  FACBrBoleto.ACBrBoletoFC := TACBrBoletoFCClass(FACBrBoletoFCFR);
+
+  {GERADOR_FORTES_REPORT}
+  //FACBrBoletoFCRL   := TACBrBoletoFCFortes.Create(FACBrBoleto);
+  //FACBrBoleto.ACBrBoletoFC := TACBrBoletoFCClass(FACBrBoletoFCRL);
 end;
 
 destructor TBoleto.Destroy;
@@ -47,7 +73,9 @@ end;
 procedure TBoleto.GerarPDF;
 begin
   Self.IncluirBoleto;
+  FACBrBoletoFCFR.FastReportFile := Self.GetINIValue(FArquivo, 'PATH', 'BOLETOFR3');  //'G:\Arquivos\Projetos Delphi\BoletoTip-Teste\Arq.Boleto\Boleto.fr3';
   FACBrBoleto.GerarPDF;
+  FACBrBoleto.Imprimir;
 end;
 
 procedure TBoleto.IncluirBoleto;
@@ -97,12 +125,14 @@ begin
   Titulo.ValorMinPagamento      := FTitulo.ValorMinPagamento;
   Titulo.ValorMaxPagamento      := FTitulo.ValorMaxPagamento;
   Titulo.Verso := FTitulo.Verso;
+
 end;
 
 function TBoleto.LerConfiguracao(Value: string): IBoleto;
 begin
   Result := Self;
   FACBrBoleto.LerConfiguracao(Value);
+  FArquivo:= Value;
 end;
 
 class function TBoleto.New: IBoleto;
