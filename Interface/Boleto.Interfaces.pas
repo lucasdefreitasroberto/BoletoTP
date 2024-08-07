@@ -110,8 +110,8 @@ type
     function TipoPagamento(Value: Integer): ITitulo<T>; overload;
     function TipoPagamento: Integer; overload;
 
-    function PercentualMinPagamentoo(Value: Currency): ITitulo<T>; overload;
-    function PercentualMinPagamentoo: Currency; overload;
+    function PercentualMinPagamento(Value: Currency): ITitulo<T>; overload;
+    function PercentualMinPagamento: Currency; overload;
 
     function PercentualMaxPagamento(Value: Currency): ITitulo<T>; overload;
     function PercentualMaxPagamento: Currency; overload;

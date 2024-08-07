@@ -127,8 +127,8 @@ type
     function QtdePagamentoParcial: Integer; overload;
     function TipoPagamento(Value: Integer): ITitulo<T>; overload;
     function TipoPagamento: Integer; overload;
-    function PercentualMinPagamentoo(Value: Currency): ITitulo<T>; overload;
-    function PercentualMinPagamentoo: Currency; overload;
+    function PercentualMinPagamento(Value: Currency): ITitulo<T>; overload;
+    function PercentualMinPagamento: Currency; overload;
     function PercentualMaxPagamento(Value: Currency): ITitulo<T>; overload;
     function PercentualMaxPagamento: Currency; overload;
     function ValorMinPagamento(Value: Currency): ITitulo<T>; overload;
@@ -147,7 +147,7 @@ implementation
 
 constructor TTitulo<T>.Create(Parent: T);
 begin
-
+  FParent := Parent;
 end;
 
 destructor TTitulo<T>.Destroy;
@@ -375,13 +375,13 @@ begin
   Result :=   FPercentualMaxPagamento;
 end;
 
-function TTitulo<T>.PercentualMinPagamentoo(Value: Currency): ITitulo<T>;
+function TTitulo<T>.PercentualMinPagamento(Value: Currency): ITitulo<T>;
 begin
   Result := Self;
   FPercentualMinPagamentoo := Value;
 end;
 
-function TTitulo<T>.PercentualMinPagamentoo: Currency;
+function TTitulo<T>.PercentualMinPagamento: Currency;
 begin
   Result := FPercentualMinPagamentoo;
 end;
