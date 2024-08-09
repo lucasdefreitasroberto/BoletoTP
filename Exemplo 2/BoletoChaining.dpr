@@ -1,0 +1,17 @@
+program BoletoChaining;
+
+uses
+  Vcl.Forms,
+  uPrincipal in 'uPrincipal.pas' {Form1} ,
+  Boleto.Component.Interfaces in 'Interface\Boleto.Component.Interfaces.pas',
+  Boleto.Component.Classes in 'Classe\Boleto.component.Classes.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+
+end.

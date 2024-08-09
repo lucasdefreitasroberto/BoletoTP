@@ -1,0 +1,29 @@
+unit Boleto.component.Classes;
+
+interface
+
+uses
+  Boleto.component.Interfaces,
+  ACBrBase,
+  ACBrBoleto,
+  ACBrUtil,
+  ACBrMail,
+  ACBrUtil.FilesIO,
+  ACBrBoletoConversao,
+  ACBrBoletoRetorno,
+  ACBrBoletoFCFR;
+
+type
+  TComponenteBoleto = class(TInterfacedObject, IComponenteBoleto<TACBrBoleto>)
+  private
+    FACBrBoleto: TACBrBoleto;
+    FACBrMail: TACBrMail;
+    FACBrBoletoFCFR: TACBrBoletoFCFR;
+  public
+    class function New: IComponenteBoleto<TACBrBoleto>;
+    function This: IComponenteBoleto<TACBrBoleto>;
+  end;
+
+implementation
+
+end.

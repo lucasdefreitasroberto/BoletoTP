@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/03/10 04:13:08.000.129,=C:\Users\HAHA\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/03/13 12:29:41.000.569,=C:\Users\HAHA\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/05/19 22:32:29.000.444,=C:\Users\HAHA\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/05/19 23:25:23.000.693,=C:\Users\HAHA\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/06 01:00:24.000.599,=C:\Users\HAHA\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/06 01:32:34.000.186,=C:\Users\HAHA\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/08 19:07:08.482,=C:\Users\HAHA\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/08 19:07:54.300,G:\Arquivos\Projetos Delphi\BoletoTip-Teste\Exemplo 2\uPrincipal.dfm=C:\Users\HAHA\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/08/08 19:07:54.300,G:\Arquivos\Projetos Delphi\BoletoTip-Teste\Exemplo 2\uPrincipal.pas=C:\Users\HAHA\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/08 19:08:35.963,G:\Arquivos\Projetos Delphi\BoletoTip-Teste\Exemplo 2\BoletoChaining.dproj=C:\Users\HAHA\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/08/08 19:08:40.963,=G:\Arquivos\Projetos Delphi\BoletoTip-Teste\Exemplo 2\Unit1.pas</Transaction>
+    <Transaction>2024/08/08 19:09:42.156,G:\Arquivos\Projetos Delphi\BoletoTip-Teste\Exemplo 2\Interface\Boleto.Component.Interfaces.pas=G:\Arquivos\Projetos Delphi\BoletoTip-Teste\Exemplo 2\Unit1.pas</Transaction>
+    <Transaction>2024/08/08 19:12:40.295,=G:\Arquivos\Projetos Delphi\BoletoTip-Teste\Exemplo 2\Unit1.pas</Transaction>
+    <Transaction>2024/08/08 19:13:30.927,G:\Arquivos\Projetos Delphi\BoletoTip-Teste\Exemplo 2\Classe\Boleto.component.Classes.pas=G:\Arquivos\Projetos Delphi\BoletoTip-Teste\Exemplo 2\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

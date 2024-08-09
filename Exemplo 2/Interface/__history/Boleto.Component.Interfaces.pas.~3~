@@ -1,0 +1,13 @@
+unit Boleto.Component.Interfaces;
+
+interface
+
+type
+  IComponenteBoleto T> = interface
+    function This: T;
+  end;
+
+implementation
+
+end.
+

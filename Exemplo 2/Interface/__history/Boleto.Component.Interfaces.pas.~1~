@@ -1,0 +1,7 @@
+unit Boleto.Component.Interfaces;
+
+interface
+
+implementation
+
+end.
